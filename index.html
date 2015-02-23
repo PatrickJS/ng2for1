@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+  <title>Angular</title>
+  <!--
+  <script src="./src/lib/angular.js"></script>
+  -->
+  <!--
+  <script src="./src/hacks.js"></script>
+  -->
+
+</head>
+<body ng-controller="MainCtrl as mainCtrl">
+  Hello World
+  <button ng-click="mainCtrl.toggleState()">Toggle</button>
+  {{ mainCtrl.toggle }}
+  <br />
+
+  <hello-world
+    yo-attr="mainCtrl.toggle"
+    on-click="mainCtrl.testingClick($event)"
+  > yolo </hello-world>
+
+  <!--
+  <script src="http://localhost:8080/webpack-dev-server.js"></script>
+  -->
+  <script src="dist/main.js"></script>
+</body>
+</html>
