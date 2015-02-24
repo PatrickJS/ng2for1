@@ -1,7 +1,6 @@
 import angular from 'exports?window.angular!angular';
 
-angular.module('component', [])
-.component('helloWorld', function({ Component, Template }) {
+function HelloWorld({ Component, Template }) {
 
   Component({
     selector: 'helloWorld',
@@ -61,6 +60,6 @@ angular.module('component', [])
 
 
   return World;
-});
+};
 
-// export default angular.module('component', []).component('helloWorld', HelloWorld);
+export default angular.module('component', []).component('helloWorld', HelloWorld);
